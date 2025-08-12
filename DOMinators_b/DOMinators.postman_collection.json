@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "a6094068-7cc5-4011-9bb7-620bc8f90c1d",
+		"name": "DOMinators",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47250550",
+		"_collection_link": "https://selvexter007-6408964.postman.co/workspace/Selvexter-Hoshino's-Workspace~aac8b048-0712-4e73-8dee-c6c8dde649e6/collection/47250550-a6094068-7cc5-4011-9bb7-620bc8f90c1d?action=share&source=collection_link&creator=47250550"
+	},
+	"item": [
+		{
+			"name": "Holdings",
+			"item": [
+				{
+					"name": "Buy an asset",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"asset_id\": 2,\n    \"quantity\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/holdings/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"holdings",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View all holdings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"asset_id\": 1,\n    \"quantity\": 10\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/holdings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"holdings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Holding By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/holdings/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"holdings",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sell a holding",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"holding_id\": 2,\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/holdings/sell",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"holdings",
+								"sell"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "Get all assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/assets/get-all",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get asset by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/assets/get/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"assets",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Get all Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/transactions/get-all-transactions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"transactions",
+								"get-all-transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Summary",
+			"item": [
+				{
+					"name": "Portfoliio summary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/portfolio/summary",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"portfolio",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Net Worth",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/networth/get-networth",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"networth",
+								"get-networth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"martinjones\",\r\n    \"password\": \"12345678\",\r\n    \"security_pin\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"martinjones\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Settlements Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/settlements/viewBalance",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"settlements",
+						"viewBalance"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		}
+	]
+}
